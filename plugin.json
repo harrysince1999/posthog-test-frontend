@@ -1,9 +1,10 @@
 {
-    "name": "posthog_test_frontend",
-    "version": "1.0.0",
-    "url": "https://github.com/harrysince1999/posthog-test-frontend",
-    "description": "Description of your plugin",
-    "entry_point": "index.html",
-    "build_command": "npm run build"
-  }
-  
+  "name": "posthog-test-frontend",
+  "url": "https://github.com/harrysince1999/posthog-test-frontend",
+  "description": "A very simple NPS score collector",
+  "config": [
+    {
+      "markdown": "## Notice: This site app injects code into your website, to display a prompt within your product. You need to **opt-in** to this by configuring your `posthog-js` initialization to include `opt_in_site_apps: true`."
+     }
+  ]
+}
