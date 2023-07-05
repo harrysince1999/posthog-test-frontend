@@ -1,0 +1,29 @@
+{
+    "name": "PostHog Test Frontend",
+    "version": "1.0.0",
+    "main": "build/index.js",
+    "description": "A plugin for integrating PostHog with a React frontend.",
+    "author": "Harikesh Mohan Yadav",
+    "repository": "https://github.com/harrysince1999/posthog-test-frontend",
+    "keywords": [
+      "posthog",
+      "react",
+      "plugin"
+    ],
+    "configuration": [
+      {
+        "name": "API Key",
+        "identifier": "api_key",
+        "type": "string",
+        "default": "",
+        "required": true
+      },
+      {
+        "name": "Enable Tracking",
+        "identifier": "enable_tracking",
+        "type": "boolean",
+        "default": true,
+        "required": false
+      }
+    ]
+  }

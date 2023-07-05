@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './Form.css';
+import posthog from 'posthog-js';
+
+
+
 
 const Form = () => {
   const [name, setName] = useState('');
@@ -7,14 +11,18 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform form submission logic here
-    console.log('Name:', name);
-    console.log('Email:', email);
+    
+    // Track form submission event using PostHog
+    posthog.capture('Form Submitted', {
+      name,
+      email,
+    });
+  
     // Reset form fields
     setName('');
     setEmail('');
   };
-
+  
   return (
     <form className="form-container" onSubmit={handleSubmit}>
       <label className="form-label">
